@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('contents',140);
             $table->text('image_at');
             $table->unsignedbigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
