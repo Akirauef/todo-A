@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 
+Route::get ('/tasks','TaskController@index')->name('tasks.index');
