@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+    function index()
+    {
+        $tasks = Task::all();
+
+        return view('tasks.index', compact('tasks'));
+
+    }
+    
     function create()
     {
         return view('tasks.create');
