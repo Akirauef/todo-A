@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Post;
+use App\Task;
 
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class TaskController extends Controller
 {
     //
     function index()
