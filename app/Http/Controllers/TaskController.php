@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Task;
-
-use App\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class TaskController extends Controller
@@ -23,6 +21,7 @@ class TaskController extends Controller
 
     function store(Request $request)
     {
+        dd($request);
         $task = new Task;
         $task -> title = $request -> title;
         $task -> body = $request -> body;
