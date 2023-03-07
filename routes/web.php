@@ -31,6 +31,6 @@ Route::get('/tasks/{id}', 'TaskController@show')->name('tasks.show');
 
 Route::get('/tasks/{id}/edit', 'TaskController@edit')->name('tasks.edit');
 
-Route::get('/tasks/{id}', 'TaskController@update')->name('tasks.update');
+Route::put('/tasks/{id}', 'TaskController@update')->name('tasks.update');
 
-Route::get('/tasks/{id}', 'TaskController@create')->name('tasks.destroy');
+Route::delete('/tasks/{id}', 'TaskController@destroy')->name('tasks.destroy');
