@@ -1,27 +1,19 @@
 @extends('layouts.app_original')
-@section('content')
-
-    <div class="header-left">
-            <img class="logo" src="./logo.png" alt="">
-        </div>
-        <div class="header-right">
-            <ul class="nav">
-                <li><a href="#">ユーザA</a></li>
-            </ul>
-        </div>
-  </header>
+@section('contents')
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">
               <div class="card mt-3">
                   <div class="card-header">
-                      <h5>タイトル：</h5>
+                      <h5>タイトル：{{ $task->title }}</h5>
                   </div>
                   <div class="card-body">
-                  <p class="card-text">内容：</p>
-                  <p>投稿日時：</p>
-                  <a href="#" class="btn btn-primary">編集する</a>
-                  <form action='#' method='post'>
+                  <p class="card-text">内容：{{ $task->body }}</p>
+                  <p>投稿日時：{{ $task->created_at }}</p>
+                  <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">編集する</a>
+                  <form action='{{ route('tasks.destroy',$task->id) }}' method='post'>
+                    @csrf
+                    @method('delete')
                       <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
                   </form>
                   </div>
@@ -46,4 +38,4 @@
         </div>
       </div>
   </div>
-@endsection
+  @endsection

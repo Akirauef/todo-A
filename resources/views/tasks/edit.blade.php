@@ -1,15 +1,5 @@
 @extends('layouts.app_original')
-@section('content')
-
-    <div class="header-left">
-            <img class="logo" src="./logo.png" alt="">
-        </div>
-        <div class="header-right">
-            <ul class="nav">
-                <li><a href="#">ユーザA</a></li>
-            </ul>
-        </div>
-  </header>
+@section('contents')
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -27,4 +17,4 @@
         </div>
     </div>
   </div>
-@endsection
+  @endsection
