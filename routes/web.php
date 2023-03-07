@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +24,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/tasks', 'TaskController@index')->name('tasks.index');
 
 Route::get('/tasks/create', 'TaskController@create')->name('tasks.create');
+
+Route::get('/tasks', 'TaskController@store')->name('tasks.store');
+
+Route::get('/tasks/{id}', 'TaskController@show')->name('tasks.show');
+
+Route::get('/tasks/{id}/edit', 'TaskController@edit')->name('tasks.edit');
+
+Route::get('/tasks/{id}', 'TaskController@update')->name('tasks.update');
+
+Route::get('/tasks/{id}', 'TaskController@create')->name('tasks.destroy');
