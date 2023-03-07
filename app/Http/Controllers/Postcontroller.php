@@ -1,8 +1,9 @@
 
-// $idはindex.blade.phpから送られたid
-functon show($id)
-{
-    $post = Post::find($id);
+   // $idはindex.blade.phpから送られたid
+   functon show($id)
+   {
+      $post = Post::find($id);
 
-    return view('posts.show',['post'=>$post]);
+      return view('posts.show',['post'=>$post]);
+   }
 }
