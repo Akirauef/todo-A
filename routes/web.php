@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,22 +19,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeControlle@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('/create', function () {
-//    return view('posts.create');
-// });
+Route::get('/tasks', 'TaskController@index')->name('tasks.index');
 
-Route::get('/posts/{id}', 
-'PostController@show')->name
-('posts.show');
+Route::get('/tasks/create', 'TaskController@create')->name('tasks.create');
 
-Route::get('/posts/{id}/edit', 
-'PostController@edit')->name
-('posts.edit');
+Route::get('/tasks', 'TaskController@store')->name('tasks.store');
 
-Route::put('/posts/{id}', 
-'PostController@update')->name
-('posts.update');
+Route::get('/tasks/{id}', 'TaskController@show')->name('tasks.show');
 
+Route::get('/tasks/{id}/edit', 'TaskController@edit')->name('tasks.edit');
 
+Route::put('/tasks/{id}', 'TaskController@update')->name('tasks.update');
+
+Route::delete('/tasks/{id}', 'TaskController@destroy')->name('tasks.destroy');
