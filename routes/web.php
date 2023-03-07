@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home, 'HomeControlle@index')->name('home');
+Route::get('/home', 'HomeControlle@index')->name('home');
 
-Route::get('/create', function () {
-    return view('posts.create');
-});
+// Route::get('/create', function () {
+//    return view('posts.create');
+// });
 
 Route::get('/posts/{id}', 
 'PostController@show')->name
