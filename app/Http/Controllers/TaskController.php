@@ -23,7 +23,7 @@ class TaskController extends Controller
     {
         $task = new Task;
         $task -> title = $request -> title;
-        $task -> body = $request -> body;
+        $task -> contents= $request ->contents;
         $task -> user_id = Auth::id();
         $task -> save();
         return redirect()->route('tasks.index');
@@ -48,7 +48,7 @@ class TaskController extends Controller
         $task = Task::find($id);
 
         $task -> title = $request -> title;
-        $task -> body = $request -> body;
+        $task -> contents = $request -> contents;
         $task -> save();
 
         return view('tasks.show', compact('tasks'));
