@@ -16,7 +16,7 @@
                 <p class="card-text">
                   内容 : {{ $task->contents}}
                 </p>
-                <p class="card-text">投稿者：Seed Techさん</p>
+                <p class="card-text">投稿者:Seed Techさん</p>
                 <a href="#" class="btn btn-primary">詳細へ</a>
             </div>
             <div class="card-footer text-muted">
