@@ -34,14 +34,14 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
 
-        return view('posts.show',['task'=>$task]);
+        return view('tasks.show',['task'=>$task]);
     }
 
     function edit($id)
     {
         $task = Task::find($id);
 
-        return view('posts.edit',['task'=>$task]);
+        return view('tasks.edit',['task'=>$task]);
     }
 
     function update(Request $request, $id)
