@@ -7,10 +7,15 @@
       return view('posts.show',['post'=>$post]);
    }
 
-    function edit($id)
-    {
-           //.  dd($id);
-           $task = Task::find$（id);
-           return view(‘tasks.show’ , [‘task’ =>$task]);
-     }
+     function update(Request $request, $id)
+  {
+           $task = Task::find($id);
+
+           $task -> title = $request -> title;
+           $task -> body = $request -> body;
+           $task -> save();
+
+           return view(‘tasks.show’ ,compact(‘task’));
+  }
 }
+
