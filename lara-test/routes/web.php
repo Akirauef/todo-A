@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get(‘/tasks/{id}/edit’ ,‘TaskController@edit’)->name
-(‘tasks.edit’);
-
+Route::put(‘/tasks/{id}/’ ,  ‘TaskController@update’)->name
+(‘tasks.update’);
 
