@@ -23,7 +23,7 @@
             <div class="card-body">
                 <h5 class="card-title">タイトル : {{ $task->title }}</h5>
                 <p class="card-text">
-                  内容 : {{ $task->body }}
+                  内容 : {{ $task->contents }}
                 </p>
                 <p class="card-text">投稿者：Seed Techさん</p>
                 <a href="#" class="btn btn-primary">詳細へ</a>

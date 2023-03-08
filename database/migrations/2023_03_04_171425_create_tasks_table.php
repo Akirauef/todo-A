@@ -17,7 +17,8 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('title',30);
             $table->string('contents', 140);
-            $table->text('image_at');
+            //nullable()でimage_atにnullの値を代入している。
+            $table->text('image_at')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
