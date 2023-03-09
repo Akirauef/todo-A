@@ -22,7 +22,6 @@ class TaskController extends Controller
     function store(Request $request)
     {
         //まずは、エラー発生時はログインしているか確認する
-        // dd($request);
         $task = new Task;
         $task -> title = $request -> title;
         $task -> contents = $request -> contents;

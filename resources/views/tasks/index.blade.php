@@ -1,15 +1,6 @@
 @extends('layouts.app_original')
 @section('content')
-{{-- 
-    <div class="header-left">
-            <img class="logo" src="./logo.png" alt="">
-        </div>
-        <div class="header-right">
-            <ul class="nav">
-                <li><a href="#">ユーザA</a></li>
-            </ul>
-        </div>
-  </header> --}}
+
   <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -25,7 +16,7 @@
                 <p class="card-text">
                   内容 : {{ $task->contents }}
                 </p>
-                <p class="card-text">投稿者：Seed Techさん</p>
+                <p class="card-text">投稿者:Seed Techさん</p>
                 <a href="#" class="btn btn-primary">詳細へ</a>
             </div>
             <div class="card-footer text-muted">
