@@ -12,9 +12,8 @@
                 </div>
                 <div class="form-group">
                     <label>内容</label>
-                    <textarea class="form-control" rows="5" name="body”>{{.$task->contents }}</textarea>
+                    <textarea class="form-control" rows="5" name="contents">{{ $task->body }}</textarea>
                 </div>
-                {{-- submitのダブルクォーテーションを変更しても字が赤い --}}
                 <button type="submit" class="btn btn-primary">更新する</button>
             </form>
         </div>
