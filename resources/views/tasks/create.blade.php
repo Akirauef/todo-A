@@ -4,9 +4,8 @@
   <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-          {{-- エラー発生のためPOSTからGETに変更しました。 --}}
-            <form action="#" method="GET">
-              {{-- サニタイジングしました --}}
+          {{-- POST methodにするときはroutingもPOST送信に変える --}}
+            <form action="{{ route('tasks.store') }}" method="POST">
               @csrf
                 <div class="form-group">
                     <label>タスク名</label>
