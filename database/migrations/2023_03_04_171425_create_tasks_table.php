@@ -16,7 +16,7 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('title',30);
-            $table->string('contents', 140);
+            $table->string('contents', 140)->nullable();
             //nullable()でimage_atにnullの値を代入している。
             $table->text('image_at')->nullable();
             $table->unsignedBigInteger('user_id');
