@@ -9,8 +9,8 @@ class TaskController extends Controller
     function index()
     {
         $tasks = Task::all();
-
-        return view('tasks.index', compact('tasks'));
+        //'task'を'tasks'に変更したところ治った。
+        return view('tasks.index',['tasks'=>$tasks]);
 
     }
     
@@ -21,6 +21,7 @@ class TaskController extends Controller
 
     function store(Request $request)
     {
+        //エラー発生時はログインしているか確認する
         // dd($request);
         $task = new Task;
         $task -> title = $request -> title;

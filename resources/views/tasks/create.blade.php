@@ -6,7 +6,8 @@
         <div class="col-md-8">
           {{-- エラー発生のためPOSTからGETに変更しました。 --}}
           {{-- POSTでいけるかチャレンジ中 --}}
-            <form action="{{ route('tasks.store') }}" method="GET">
+          {{-- POST methodにするときはroutingもPOST送信に変える --}}
+            <form action="{{ route('tasks.store') }}" method="POST">
               @csrf
                 <div class="form-group">
                     <label>タイトル</label>

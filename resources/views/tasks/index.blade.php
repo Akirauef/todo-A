@@ -1,6 +1,6 @@
 @extends('layouts.app_original')
 @section('content')
-
+{{-- 
     <div class="header-left">
             <img class="logo" src="./logo.png" alt="">
         </div>
@@ -9,7 +9,7 @@
                 <li><a href="#">ユーザA</a></li>
             </ul>
         </div>
-  </header>
+  </header> --}}
   <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
