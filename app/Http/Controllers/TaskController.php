@@ -52,7 +52,7 @@ class TaskController extends Controller
         $task -> contents = $request -> contents;
         $task -> save();
 
-        return view('tasks.show', compact('tasks'));
+        return view('tasks.index',['task'=>$task]);
     }
 
     function destroy($id)
