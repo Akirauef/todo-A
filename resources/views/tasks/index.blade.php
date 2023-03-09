@@ -6,28 +6,28 @@
         <div class="col-md-8">
              <div class="card text-center">
             <div class="card-header">
-                投稿一覧
+                タスク一覧
             </div>
 
             @foreach($tasks as $task)
                 
             <div class="card-body">
-                <h5 class="card-title">タイトル : {{ $task->title }}</h5>
+                <h5 class="card-title">タスク名 : {{ $task->title }}</h5>
                 <p class="card-text">
-                  内容 : {{ $task->contents }}
+                  コンテンツ : {{ $task->contents }}
                 </p>
-                <p class="card-text">投稿者:Seed Techさん</p>
-                <a href="#" class="btn btn-primary">詳細へ</a>
+                <p class="card-text">作成者:{{ Auth::user()->name }}</p>
+                <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-primary">詳細へ</a>
             </div>
             <div class="card-footer text-muted">
-                投稿日時 : {{ $task->created_at }}
+                作成日時 : {{ $task->created_at }}
             </div>
             @endforeach
         </div>
         </div>
         <div class="col-md-2">
           <a href="{{ route('tasks.create') }}" class="btn btn-primary">
-            新規投稿
+            新規作成
           </a>
         </div>
     </div>
