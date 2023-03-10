@@ -13,7 +13,7 @@
                 </div>
                 <div class="form-group">
                     <label>コンテンツ</label>
-                    <textarea class="form-control" placeholder="内容" rows="5" name="body">
+                    <textarea class="form-control" placeholder="内容" rows="5" name="contents">
                     </textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">作成</button>
