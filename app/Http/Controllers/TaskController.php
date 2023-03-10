@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Task;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     function index()
@@ -52,7 +52,7 @@ class TaskController extends Controller
         $task -> contents = $request -> contents;
         $task -> save();
 
-        return view('tasks.index',['task'=>$task]);
+        return view('tasks.show',['task'=>$task]);
     }
 
     function destroy($id)

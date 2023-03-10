@@ -32,4 +32,5 @@ Route::get('/tasks/{id}', 'TaskController@show')->name('tasks.show');
 Route::get('/tasks/{id}/edit', 'TaskController@edit')->name('tasks.edit');
 
 Route::put('/tasks/{id}', 'TaskController@update')->name('tasks.update');
+
 Route::delete('/tasks/{id}', 'TaskController@destroy')->name('tasks.destroy');
